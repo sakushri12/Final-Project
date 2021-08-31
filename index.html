@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+         <h1>Task Planner</h1>
+         <br>
+        <button type="button" class="btn btn-primary btn-lg">Create Task</button>
+        <br>
+        <br>
+        </head>
+        <body>
+        <!-- card starts here-->
+    <div class="row">
+   <div class="card" style="width: 28rem;">
+    <div class="card-body">
+      <h5 class="card-title">Task</h5>
+      <!-- Name -->
+   <div class="input-group-text">
+    <span class="input-text">Name</span>
+    <input type="text" aria-label="form-control" class="form-control">
+    </div>
+    <br>
+    <!-- Discription box -->
+      <div class="mb-3 input-group-text">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+      </div>
+      <br>
+      <!-- Assign to -->
+      <div class="input-group-text">
+        <span class="input-text">Assigned To</span>
+        <input type="text" aria-label="form-control" class="form-control">
+        </div>
+        <br>
+      <!-- Due date -->
+        <div class="input-group-text">
+        <span class="input-text">Due Date</span>
+        <input type="date" aria-label="form-control" class="form-control">
+        </div>
+        <br>
+        <!-- Status -->
+        <!-- <label for="status">Status</label> 
+               <select id="status" name="status">
+                   <option value="todo">To Do</option>
+                   <option value="in progress">In progress</option>
+                   <option value="review">Review</option>
+                    <option value="done">Done</option> -->
+        <div class="col">
+            <label for="exampleFormControlSelect2"></label>
+          <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+            <option selected>Status </option>
+            <option value="1">To Do</option>
+            <option value="2">In Progress</option>
+            <option value="3">Review</option>
+            <option value="3">Done</option>
+          </select>        
+          </div>
+          <br>
+          <!-- Edit or Delete -->
+          <input type="submit" value="Add Task">
+          <div class="vr"></div>
+         <input type="reset" value="Reset">
+    </div>
+  </div>
+   <!--Card end here-->
+    <div class="card" style="width: 18rem;">  
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+   </div>
+  </body>
+  </html>
