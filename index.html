@@ -10,9 +10,8 @@
         <button type="button" class="btn btn-primary btn-lg">Create Task</button>
         <br>
         <br>
-        <link href="style.css" rel="stylesheet">
-        </head>
-        <body>
+    </head>
+    <body>
         <!-- card starts here-->
     <div class="row">
    <div class="card" style="width: 28rem;">
@@ -42,14 +41,15 @@
         <input type="date" aria-label="form-control" class="form-control">
         </div>
         <br>
+        <!-- status starts here -->
           <div class="col">
             <label for="exampleFormControlSelect2"></label>
           <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
             <option selected>Status </option>
-            <option value="1">To Do</option>
-            <option value="2">In Progress</option>
-            <option value="3">Review</option>
-            <option value="3">Done</option>
+            <option value="todo">To Do</option>
+            <option value="inprogress">In Progress</option>
+            <option value="review">Review</option>
+            <option value="done">Done</option>
           </select>        
           </div>
           <br>
@@ -61,98 +61,106 @@
         <input type="reset" value="Reset">
     </div>
   </div>
-   <!--Card end here-->
-    <!-- <div class="card" style="width: 18rem;">  
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
+      <!-- task layout starts here -->
+   <section class="tasklayout">
+    <div class="d-flex flex-row bd-highlight mb-3">
+      <!-- card1 starts here -->
+      <div class="p-2 bd-highlight">
+        <div class="card" style="width: 16rem;">
+          <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned To</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Date</li>
+        </ul>
+        <div class="card-body">
+          <a class="btn btn-primary" href="#" role="button">Edit</a>
+          <a class="btn btn-primary" href="#" role="button">Delete</a>
+        </div>
+      </div>
+      </div>
+      <!-- card1 ends here -->
+      <!-- card2 starts here -->
+      <div class="p-2 bd-highlight">
+        <div class="card" style="width: 16rem;">
+          <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned To</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Date</li>
+        </ul>
+        <div class="card-body">
+          <a class="btn btn-primary" href="#" role="button">Edit</a>
+          <a class="btn btn-primary" href="#" role="button">Delete</a>
+        </div>
+      </div>
+      </div>
+      <!-- card2 ends here -->
+        <!-- card3 starts here -->
+      <div class="p-2 bd-highlight">
+          <div class="card" style="width: 16rem;">
+          <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned To</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Date</li>
+        </ul>
+        <div class="card-body">
+          <a class="btn btn-primary" href="#" role="button">Edit</a>
+          <a class="btn btn-primary" href="#" role="button">Delete</a>
+        </div>
+      </div>
+      </div>
+      <!-- card3 ends here -->
+      <!-- card4 starts here -->
+      <div class="p-2 bd-highlight">
+        <div class="card" style="width: 16rem;">
+          <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned To</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Date</li>
+        </ul>
+        <div class="card-body">
+          <a class="btn btn-primary" href="#" role="button">Edit</a>
+          <a class="btn btn-primary" href="#" role="button">Delete</a>
+        </div> 
+      </div>
+      </div>
+      <!-- card4 ends here -->
+      <!-- card5 starts here -->
+      <div class="p-2 bd-highlight">
+        <div class="card" style="width: 16rem;">
+          <div class="card-body">
+          <h5 class="card-title">Task Name</h5>
+          <p class="card-text">Description</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Assigned To</li>
+          <li class="list-group-item">Status</li>
+          <li class="list-group-item">Date</li>
+        </ul>
+        <div class="card-body">
+          <a class="btn btn-primary" href="#" role="button">Edit</a>
+          <a class="btn btn-primary" href="#" role="button">Delete</a>
+        </div> 
+      </div>
+      </div>
+      <!-- card5 ends here -->
     </div>
-   </div> -->
-   <hr>
-   <hr>
-   <div class="layout">
-   <div class="card" style="width: 18rem;">
-  
-    <div class="card-body">
-      <h5 class="card-title">Task Name</h5>
-      <p class="card-text">Description</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Assigned To</li>
-      <li class="list-group-item">Status</li>
-      <li class="list-group-item">Date</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Edit</a>
-      <a href="#" class="card-link">Delete</a>
-    </div>
-  </div>
-
-
-  <div class="card" style="width: 18rem;">
-      <div class="card-body">
-      <h5 class="card-title">Task Name</h5>
-      
-    <p class="card-text">Description</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Assigned To</li>
-      <li class="list-group-item">Status</li>
-      <li class="list-group-item">Date</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Edit</a>
-      <a href="#" class="card-link">Delete</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-    <h5 class="card-title">Task Name</h5>
-    <p class="card-text">Description</p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Assigned To</li>
-    <li class="list-group-item">Status</li>
-    <li class="list-group-item">Date</li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">Edit</a>
-    <a href="#" class="card-link">Delete</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-  <h5 class="card-title">Task Name</h5>
-  <p class="card-text">Description</p>
-</div>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Assigned To</li>
-  <li class="list-group-item">Status</li>
-  <li class="list-group-item">Date</li>
-</ul>
-<div class="card-body">
-  <a href="#" class="card-link">Edit</a>
-  <a href="#" class="card-link">Delete</a>
-</div>
-</div>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-  <h5 class="card-title">Task Name</h5>
-  <p class="card-text">Description</p>
-</div>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Assigned To</li>
-  <li class="list-group-item">Status</li>
-  <li class="list-group-item">Date</li>
-</ul>
-<div class="card-body">
-  <a href="#" class="card-link">Edit</a>
-  <a href="#" class="card-link">Delete</a>
-</div>
-</div>
-</div>
-  </body>
-  </html>
+       </section>
+   <!-- <task layout ends here -->
+    </body>
+</html>g
