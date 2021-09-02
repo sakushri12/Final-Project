@@ -1,166 +1,324 @@
-<!DOCTYPE html>
-<html>
-    <head>
-       <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-         <h1>Task Planner</h1>
-         <br>
-        <button type="button" class="btn btn-primary btn-lg">Create Task</button>
-        <br>
-        <br>
-    </head>
-    <body>
-        <!-- card starts here-->
-    <div class="row">
-   <div class="card" style="width: 28rem;">
-    <div class="card-body">
-      <h5 class="card-title">Task</h5>
-      <!-- Name -->
-   <div class="input-group-text">
-    <span class="input-text">Name</span>
-    <input type="text" aria-label="form-control" class="form-control">
-    </div>
-    <br>
-    <!-- Discription box -->
-      <div class="mb-3 input-group-text">
-        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- mystyles-css -->
+    <link href="./css/mystyles.css" rel="stylesheet">
+    <title class="text-center">Task Planner</title>
+  </head>
+  <body>
+    <h1 class="text-center">Task Planner</h1>
+    <!--button start here-->
+      <!-- Button trigger modal -->
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary ctask " data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Create Task
+  </button>
+  <br>
+  <br>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="text-center">Add New Task</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group-text">
+                <span class="input-text">Name</span>
+                <input type="text" aria-label="form-control" class="form-control">
+                </div>
+                <br>
+                <!-- Discription box -->
+                  <div class="mb-3 input-group-text">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea class="form-control" maxlength="260" id="description" rows="6" placeholder="260 character limit" name="description" id="desc"></textarea>
+                  </div>
+                  <br>
+                  <!-- Assign to -->
+                  <div class="input-group-text">
+                    <span class="input-text">Assigned To</span>
+                    <input type="text" aria-label="form-control" class="form-control">
+                    </div>
+                  <br>
+                  <br>
+                  <div class="col-md-6">
+                    <label for="dueDate" class="form-label" >Due date:</label>
+                  <input type="date" class="form-control" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
+                </div>
+                <br>
+                <br>
+                <!-- Status -->
+                <div class="col">
+                    <label for="Status"></label>
+                  <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                    <option selected>Status </option>
+                    <option value="1">To Do</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Review</option>
+                    <option value="3">Done</option>
+                  </select>        
+                  </div>
+              </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add Task</button>
+        </div>
       </div>
-      <br>
-      <!-- Assign to -->
-      <div class="input-group-text">
-        <span class="input-text">Assigned To</span>
-        <input type="text" aria-label="form-control" class="form-control">
-        </div>
-        <br>
-      <!-- Due date -->
-        <div class="input-group-text">
-        <span class="input-text">Due Date</span>
-        <input type="date" aria-label="form-control" class="form-control">
-        </div>
-        <br>
-        <!-- status starts here -->
-          <div class="col">
-            <label for="exampleFormControlSelect2"></label>
-          <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-            <option selected>Status </option>
-            <option value="todo">To Do</option>
-            <option value="inprogress">In Progress</option>
-            <option value="review">Review</option>
-            <option value="done">Done</option>
-          </select>        
-          </div>
-          <br>
-          <!-- Edit or Delete -->
-          <div class="reset"></div>
-          <input type="submit" value="Add Task">
-          </div>
-          <div class="vr"></div>
-        <input type="reset" value="Reset">
     </div>
   </div>
-      <!-- task layout starts here -->
-   <section class="tasklayout">
-    <div class="d-flex flex-row bd-highlight mb-3">
-      <!-- card1 starts here -->
-      <div class="p-2 bd-highlight">
-        <div class="card" style="width: 16rem;">
+  <!-- Button end here-->
+  <!-- <h2 class="text-center">Task Layout</h2> -->
+  <!--container start here-->
+  <!-- <div class="container md-6" id="tasks"> -->
+    <section class="tasklayout">
+      <div class="d-flex flex-row bd-highlight mb-3 justify-content text-center">
+    <div class="row" id="row1">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div>
+            <h5 class="card-title">Task</h5>
+            <!-- Name-->
+         <div class="input-group-text">
+          <span class="input-text">Name</span>
+          <input type="text" aria-label="form-control" class="form-control">
+          </div>
+          <br>
+          <!-- Discription box -->
+            <div class="mb-3 input-group-text">
+              <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <!-- Assign to -->
+            <div class="input-group-text">
+              <span class="input-text">Assigned to</span>
+              <input type="text" aria-label="form-control" class="form-control">
+            </div>
+            <br>
+            <!-- Due date -->
+            <div class="input-group-text">
+              <span class="input-text">Due Date</span>
+              <input type="text" aria-label="form-control" class="form-control">
+              </div>
+              <br>
+              <!-- Status -->
+              <div class="col">
+                  <label for="exampleFormControlSelect2"></label>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                  <option selected>Status </option>
+                  <option value="1">To Do</option>
+                  <option value="2">In Progress</option>
+                  <option value="3">Review</option>
+                  <option value="3">Done</option>
+                </select>        
+                </div>
+                <!-- Edit or Delete -->
+                <input type="submit" value="Edit">
+               <input type="reset" value="Delete">
+          </div>
+         </div>
       </div>
-      </div>
-      <!-- card1 ends here -->
-      <!-- card2 starts here -->
-      <div class="p-2 bd-highlight">
-        <div class="card" style="width: 16rem;">
+    <!-- Second card sttttarts here -->
+      <div class="col">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div>
+            <h5 class="card-title">Task</h5>
+            <!-- Name -->
+         <div class="input-group-text">
+          <span class="input-text">Name</span>
+          <input type="text" aria-label="form-control" class="form-control">
+          </div>
+          <br>
+          <!-- Discription box -->
+            <div class="mb-3 input-group-text">
+              <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <!-- Assign to -->
+            <div class="input-group-text">
+              <span class="input-text">Assigned to</span>
+              <input type="text" aria-label="form-control" class="form-control">
+            </div>
+            <br>
+            <!-- Due date -->
+            <div class="input-group-text">
+              <span class="input-text">Due Date</span>
+              <input type="text" aria-label="form-control" class="form-control">
+              </div>
+              <br>
+              <!-- Status -->
+              <div class="col">
+                  <label for="exampleFormControlSelect2"></label>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                  <option selected>Status </option>
+                  <option value="1">To Do</option>
+                  <option value="2">In Progress</option>
+                  <option value="3">Review</option>
+                  <option value="3">Done</option>
+                </select>        
+                </div>
+                <!-- Edit or Delete -->
+                <input type="submit" value="Edit">
+               <input type="reset" value="Delete">
+          </div>
+         </div>
       </div>
-      </div>
-      <!-- card2 ends here -->
-        <!-- card3 starts here -->
-      <div class="p-2 bd-highlight">
-          <div class="card" style="width: 16rem;">
+      <!-- Third card start here -->
+      <div class="col">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
+            <h5 class="card-title">Task</h5>
+            <!-- Name -->
+         <div class="input-group-text">
+          <span class="input-text">Name</span>
+          <input type="text" aria-label="form-control" class="form-control">
+          </div>
+          <br>
+          <!-- Discription box -->
+            <div class="mb-3 input-group-text">
+              <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <!-- Assign to -->
+            <div class="input-group-text">
+              <span class="input-text">Assigned to</span>
+              <input type="text" aria-label="form-control" class="form-control">
+            </div>
+            <br>
+            <!-- Due date -->
+            <div class="input-group-text">
+              <span class="input-text">Due Date</span>
+              <input type="text" aria-label="form-control" class="form-control">
+              </div>
+              <br>
+              <!-- Status -->
+              <div class="col">
+                  <label for="exampleFormControlSelect2"></label>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                  <option selected>Status </option>
+                  <option value="1">To Do</option>
+                  <option value="2">In Progress</option>
+                  <option value="3">Review</option>
+                  <option value="3">Done</option>
+                </select>        
+                </div>
+                <!-- Edit or Delete -->
+                <input type="submit" value="Edit">
+               <input type="reset" value="Delete">
+          </div>
+         </div>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div>
-      </div>
-      </div>
-      <!-- card3 ends here -->
-      <!-- card4 starts here -->
-      <div class="p-2 bd-highlight">
-        <div class="card" style="width: 16rem;">
+    <!-- Fourth card start here -->
+      <div class="row" id="row2">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div> 
+            <h5 class="card-title">Task</h5>
+            <!-- Name -->
+         <div class="input-group-text">
+          <span class="input-text">Name</span>
+          <input type="text" aria-label="form-control" class="form-control">
+          </div>
+          <br>
+          <!-- Discription box -->
+            <div class="mb-3 input-group-text">
+              <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <!-- Assign to -->
+            <div class="input-group-text">
+              <span class="input-text">Assigned to</span>
+              <input type="text" aria-label="form-control" class="form-control">
+            </div>
+            <br>
+            <!-- Due date -->
+            <div class="input-group-text">
+              <span class="input-text">Due Date</span>
+              <input type="text" aria-label="form-control" class="form-control">
+              </div>
+              <br>
+              <!-- Status -->
+              <div class="col">
+                  <label for="exampleFormControlSelect2"></label>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                  <option selected>Status </option>
+                  <option value="1">To Do</option>
+                  <option value="2">In Progress</option>
+                  <option value="3">Review</option>
+                  <option value="3">Done</option>
+                </select>        
+                </div>
+                <!-- Edit or Delete -->
+                <input type="submit" value="Edit">
+               <input type="reset" value="Delete">
+          </div>
+         </div>
       </div>
-      </div>
-      <!-- card4 ends here -->
-      <!-- card5 starts here -->
-      <div class="p-2 bd-highlight">
-        <div class="card" style="width: 16rem;">
+    <!-- Fifth card starts here--> 
+     <div class="col">
+        <div class="card" style="width: 18rem;">
           <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div> 
+            <h5 class="card-title">Task</h5>
+            <!-- Name -->
+         <div class="input-group-text">
+          <span class="input-text">Name</span>
+          <input type="text" aria-label="form-control" class="form-control">
+          </div>
+          <br>
+          <!-- Discription box -->
+            <div class="mb-3 input-group-text">
+              <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <br>
+            <!-- Assign to -->
+            <div class="input-group-text">
+              <span class="input-text">Assigned to</span>
+              <input type="text" aria-label="form-control" class="form-control">
+            </div>
+            <br>
+            <!-- Due date -->
+            <div class="input-group-text">
+              <span class="input-text">Due Date</span>
+              <input type="text" aria-label="form-control" class="form-control">
+              </div>
+              <br>
+              <!-- Status -->
+              <div class="col">
+                  <label for="exampleFormControlSelect2"></label>
+                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
+                  <option selected>Status </option>
+                  <option value="1">To Do</option>
+                  <option value="2">In Progress</option>
+                  <option value="3">Review</option>
+                  <option value="3">Done</option>
+                </select>        
+                </div>
+                <!-- Edit or Delete -->
+                <input type="submit" value="Edit">
+               <input type="reset" value="Delete">
+          </div>
+         </div>
       </div>
       </div>
-      <!-- card5 ends here -->
     </div>
-       </section>
-   <!-- <task layout ends here -->
-    </body>
-</html>g
+  </div>
+</div>
+</div>
+</section>
+  <br>
+    <br>
+<footer></footer>
+<!--Container ends here-->  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
