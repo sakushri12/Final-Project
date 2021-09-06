@@ -86,284 +86,155 @@
       </div>
     </div>
   </div>
-  <!-- Button end here-->
-  <!-- <h2 class="text-center">Task Layout</h2> -->
-  <!--container start here-->
-  <!-- <div class="d-flex flex-nowrap"> -->
-    <!-- <div class="grid"> -->
-    <section class="container mt-5" id="cards"> 
-    <div class="row">
-
-      <!-- 1st column starts here -->
-      <div class="col">
-<<<<<<< HEAD
-        <div class="p-2 bd-highlight">
-          <div class="card" style="width: 16rem;">
-            <div class="card-body">
-            <h5 class="card-title">Task Name</h5>
-            <p class="card-text">Description</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Assigned To</li>
-            <li class="list-group-item">Status</li>
-            <li class="list-group-item">Date</li>
-          </ul>
-          <div class="card-body">
-            <a class="btn btn-primary" href="#" role="button">Edit</a>
-            <a class="btn btn-primary" href="#" role="button">Delete</a>
-          </div>
-        </div>
-        </div>
+  <!-- tasklayout starts here -->
+   <section class="container" id="cards"> 
+                <div class="d-flex flex-row bd-highlight mb-3">
+                  <!-- card1 starts here -->
+  <div class="p-2 bd-highlight">
+  <div class="card" style="width: 16rem;">
+    <div class="card-body">
+    <h5 class="card-title">Task Name</h5>
+    <textarea placeholder="description" rows="4" cols="28"></textarea>
+  </div>
+   <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
+  <li class="list-group-item"></li> 
+    <select  name="cardStatus" id="cardStatus">
+      <option value="status">Status</option>
+        <option value="todo">ToDo</option>
+        <option value="progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+    </select>
+    <li class="list-group-item "></li>
+   <label for="dueDate" >Due date:</label>
+    <input type="date" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
   
-        <!-- <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
-             <!-- Name-->
-         <div class="input-group-text">
-          <span class="input-text">Name</span>
-          <input type="text" aria-label="form-control" class="form-control">
-=======
-        <!-- Card starts here -->
-        <section class="container" id="c1">
-        <div class="card" style="width: 15rem;">
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
-            <!-- <p class="card-text">Task-Title</p> -->
-            <input type="text" placeholder="Task-Title" name="CardTask-Title" id="cardTask-Title"/> 
-            <div class = "box">
-              <textarea  placeholder="Description" id="floatingTextarea"></textarea>
->>>>>>> f5b9b9959a709def402f38373ef8480e611b2fd4
-          </div>
-        
-          <div class = "box box-3"> 
-                  <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
-                  <br>
-                  <br>   
-                  <select  name="cardStatus" id="cardStatus">
-                      <option value="todo">ToDo</option>
-                      <option value="progress">In Progress</option>
-                      <option value="review">Review</option>
-                      <option value="done">Done</option>
-                  </select>
-                  <br>
-                  <br>
-                  <img src="./images/editblue.jpeg" alt="edit" width="40" height="50" class="d-inline-block align-text-top"/>
-                  <img src="./images/deleteblue.jpeg" alt="delete" width="50" height="50" class="d-inline-block align-text-top"/>
-          </div> 
-        </div>
-      </section>
-      </div>
-        <!-- Card ends here -->
+    </ul>
+  <div class="card-body">
+    <a class="btn btn-primary" href="#" role="button">Edit</a>
+    <a class="btn btn-primary" href="#" role="button">Delete</a>
+  </div>
+</div>
+</div>
+          <!-- card2 starts here -->
 
-         <!-- 2nd column starts here -->
-      <div class="col">
-        <!-- Card starts here -->
-        <section class="container">
-        <div class="card" style="width: 15rem;">
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
-            <!-- <p class="card-text">Task-Title</p> -->
-            <input type="text" placeholder="Task-Title" name="CardTask-Title" id="cardTask-Title"/> 
-            <div class = "box">
-              <textarea  placeholder="Description" id="floatingTextarea"></textarea>
-          </div>
-
-        
-          <div class = "box box-3"> 
-                  <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
-                  <br>
-                  <br>   
-                  <select  name="cardStatus" id="cardStatus">
-                      <option value="todo">ToDo</option>
-                      <option value="progress">In Progress</option>
-                      <option value="review">Review</option>
-                      <option value="done">Done</option>
-                  </select>
-                  <br>
-                  <br>
-                  <img src="./images/editblue.jpeg" alt="edit" width="40" height="50" class="d-inline-block align-text-top"/>
-                  <img src="./images/deleteblue.jpeg" alt="delete" width="50" height="50" class="d-inline-block align-text-top"/>
-          </div> 
-        </div>
-      </section>
-
-      </div>
-        <!-- Card ends here -->
-
-         <!-- 3rd column starts here -->
-      <div class="col">
-        <!-- Card starts here -->
-        <section class="container">
-        <div class="card" style="width: 15rem;">
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
-            <!-- <p class="card-text">Task-Title</p> -->
-            <input type="text" placeholder="Task-Title" name="CardTask-Title" id="cardTask-Title"/> 
-            <div class = "box">
-              <textarea  placeholder="Description" id="floatingTextarea"></textarea>
-          </div>
-
-        
-          <div class = "box box-3"> 
-                  <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
-                  <br>
-                  <br>   
-                  <select  name="cardStatus" id="cardStatus">
-                      <option value="todo">ToDo</option>
-                      <option value="progress">In Progress</option>
-                      <option value="review">Review</option>
-                      <option value="done">Done</option>
-                  </select>
-                  <br>
-                  <br>
-                  <img src="./images/editblue.jpeg" alt="edit" width="40" height="50" class="d-inline-block align-text-top"/>
-                  <img src="./images/deleteblue.jpeg" alt="delete" width="50" height="50" class="d-inline-block align-text-top"/>
-          </div> 
-        </div>
-      </section>
-      </div>
-        <!-- Card ends here -->
-
-      <!-- 4th column starts here -->
-      <div class="col">
-        <!-- Card starts here -->
-        <section class="container">
-        <div class="card" style="width: 15rem;">
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
-            <!-- <p class="card-text">Task-Title</p> -->
-            <input type="text" placeholder="Task-Title" name="CardTask-Title" id="cardTask-Title"/> 
-            <div class = "box">
-              <textarea  placeholder="Description" id="floatingTextarea"></textarea>
-          </div>
-
-        
-          <div class = "box box-3"> 
-                  <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
-                  <br>
-                  <br>   
-                  <select  name="cardStatus" id="cardStatus">
-                      <option value="todo">ToDo</option>
-                      <option value="progress">In Progress</option>
-                      <option value="review">Review</option>
-                      <option value="done">Done</option>
-                  </select>
-                  <br>
-                  <br>
-                  <img src="./images/editblue.jpeg" alt="edit" width="40" height="50" class="d-inline-block align-text-top"/>
-                  <img src="./images/deleteblue.jpeg" alt="delete" width="50" height="50" class="d-inline-block align-text-top"/>
-          </div> 
-        </div>
-      </section>
-
-      </div>
- HEAD
-    <!-- Fifth card starts here--> 
-     <div class="col">
       <div class="p-2 bd-highlight">
-        div class="card" style="width: 16rem;">
-          <div class="card-body">
-          <h5 class="card-title">Task Name</h5>
-          <p class="card-text">Description</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Assigned To</li>
-          <li class="list-group-item">Status</li>
-          <li class="list-group-item">Date</li>
-        </ul>
-        <div class="card-body">
-          <a class="btn btn-primary" href="#" role="button">Edit</a>
-          <a class="btn btn-primary" href="#" role="button">Delete</a>
-        </div>
-      </div>
-      </div>
-<!-- 
-        <div class="card" style="width: 18rem;">
-        <!-- Card ends here -->
-         <!-- 5th column starts here -->
-      <div class="col">
-        <!-- Card starts here -->
-        <section class="container">
-        <div class="card" style="width: 15rem;">
- f5b9b9959a709def402f38373ef8480e611b2fd4
-          <div class="card-body">
-            <h5 class="card-title">Task</h5>
+  <div class="card" style="width: 16rem;">
+    <div class="card-body">
+    <h5 class="card-title">Task Name</h5>
+    <textarea placeholder="description" rows="4" cols="28"></textarea>
+  </div>
+   <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
+  <li class="list-group-item"></li> 
+    <select  name="cardStatus" id="cardStatus">
+      <option value="status">Status</option>
+        <option value="todo">ToDo</option>
+        <option value="progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+    </select>
+    <li class="list-group-item "></li>
+   <label for="dueDate" >Due date:</label>
+    <input type="date" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
+  
+    </ul>
+  <div class="card-body">
+    <a class="btn btn-primary" href="#" role="button">Edit</a>
+    <a class="btn btn-primary" href="#" role="button">Delete</a>
+  </div>
+</div>
+</div>
 
-            <!-- <p class="card-text">Task-Title</p> -->
-            <input type="text" placeholder="Task-Title" name="CardTask-Title" id="cardTask-Title"/> 
-            <div class = "box">
-              <textarea  placeholder="Description" id="floatingTextarea"></textarea>
-          </div>
- HEAD
-          <br>
-          <!-- Discription box -->
-            <div class="mb-3 input-group-text">
-              <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <br>
-            <!-- Assign to -->
-            <div class="input-group-text">
-              <span class="input-text">Assigned to</span>
-              <input type="text" aria-label="form-control" class="form-control">
-            </div>
-            <br>
-            <!-- Due date -->
-            <div class="input-group-text">
-              <span class="input-text">Due Date</span>
-              <input type="text" aria-label="form-control" class="form-control">
-              </div>
-              <br>
-              <!-- Status -->
-              <div class="col">
-                  <label for="exampleFormControlSelect2"></label>
-                <select class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                  <option selected>Status </option>
-                  <option value="todo">To Do</option>
-                  <option value="in_progress">In Progress</option>
-                  <option value="review">Review</option>
-                  <option value="done">Done</option>
-                </select>        
-                </div>
-                <!-- Edit or Delete -->
-                <a class="btn btn-primary" href="#" role="button">Edit</a>
-                <a class="btn btn-primary" href="#" role="button">Delete</a>
-            </div>
-         </div>
-      </div>
-    </div>
-    </div>
-   </div> -->
-     </section>
-      <br>
-<footer></footer>
+        <!-- Card2 ends here -->
+        <!-- card3 starts here -->
+        <div class="p-2 bd-highlight">
+  <div class="card" style="width: 16rem;">
+    <div class="card-body">
+    <h5 class="card-title">Task Name</h5>
+    <textarea placeholder="description" rows="4" cols="28"></textarea>
+  </div>
+   <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
+  <li class="list-group-item"></li> 
+    <select  name="cardStatus" id="cardStatus">
+      <option value="status">Status</option>
+        <option value="todo">ToDo</option>
+        <option value="progress">In Progress</option>
+        <option value="review">Review</option>
+        <option value="done">Done</option>
+    </select>
+    <li class="list-group-item "></li>
+   <label for="dueDate" >Due date:</label>
+    <input type="date" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
+  
+    </ul>
+  <div class="card-body">
+    <a class="btn btn-primary" href="#" role="button">Edit</a>
+    <a class="btn btn-primary" href="#" role="button">Delete</a>
+  </div>
+</div>
+</div>
+<!-- card3 ends here -->
+<!-- card4 starts here -->
+<div class="p-2 bd-highlight">
+<div class="card" style="width: 16rem;">
+  <div class="card-body">
+  <h5 class="card-title">Task Name</h5>
+  <textarea placeholder="description" rows="4" cols="28"></textarea>
+</div>
+ <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
+<li class="list-group-item"></li> 
+  <select  name="cardStatus" id="cardStatus">
+    <option value="status">Status</option>
+      <option value="todo">ToDo</option>
+      <option value="progress">In Progress</option>
+      <option value="review">Review</option>
+      <option value="done">Done</option>
+  </select>
+  <li class="list-group-item "></li>
+ <label for="dueDate" >Due date:</label>
+  <input type="date" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
 
-        
-          <div class = "box box-3"> 
-                  <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
-                  <br>
-                  <br>   
-                  <select  name="cardStatus" id="cardStatus">
-                      <option value="todo">ToDo</option>
-                      <option value="progress">In Progress</option>
-                      <option value="review">Review</option>
-                      <option value="done">Done</option>
-                  </select>
-                  <br>
-                  <br>
-                  <img src="./images/editblue.jpeg" alt="edit" width="40" height="50" class="d-inline-block align-text-top"/>
-                  <img src="./images/deleteblue.jpeg" alt="delete" width="50" height="50" class="d-inline-block align-text-top"/>
-          </div> 
-        </div>
-      </section>
-      </div>
-        <!-- Card ends here -->
-        </div>
-        </section>
+  </ul>
+<div class="card-body">
+  <a class="btn btn-primary" href="#" role="button">Edit</a>
+  <a class="btn btn-primary" href="#" role="button">Delete</a>
+</div>
+</div>
+</div>
+        <!-- Card4 ends here -->
+
+     
+  
+
+    <!-- Fifth card starts here--> 
+    <div class="p-2 bd-highlight">
+    <div class="card" style="width: 16rem;">
+      <div class="card-body">
+      <h5 class="card-title">Task Name</h5>
+      <textarea placeholder="description" rows="4" cols="28"></textarea>
+    </div>
+     <input type="text" placeholder="AssignedTo" name="cardAssignedTo" id="cardAssignedTo"/>  
+    <li class="list-group-item"></li> 
+      <select  name="cardStatus" id="cardStatus">
+        <option value="status">Status</option>
+          <option value="todo">ToDo</option>
+          <option value="progress">In Progress</option>
+          <option value="review">Review</option>
+          <option value="done">Done</option>
+      </select>
+      <li class="list-group-item "></li>
+     <label for="dueDate" >Due date:</label>
+      <input type="date" min=2021-01-01 max=2022-01-01 id="dueDate" name="dueDate" required>
     
-  <footer></footer>
- f5b9b9959a709def402f38373ef8480e611b2fd4
-<!--Container ends here-->  
+      </ul>
+    <div class="card-body">
+      <a class="btn btn-primary" href="#" role="button">Edit</a>
+      <a class="btn btn-primary" href="#" role="button">Delete</a>
+    </div>
+  </div>
+  </div>
+<!-- task layout ends here--> 
+<footer></footer> 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
